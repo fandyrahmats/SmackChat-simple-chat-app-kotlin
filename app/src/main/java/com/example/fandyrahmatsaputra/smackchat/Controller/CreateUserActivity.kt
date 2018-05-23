@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.fandyrahmatsaputra.smackchat.R
+import com.example.fandyrahmatsaputra.smackchat.Services.AuthService
 import kotlinx.android.synthetic.main.activity_create_user.*
 import java.util.*
 
@@ -50,7 +51,11 @@ class CreateUserActivity : AppCompatActivity() {
     }
 
     fun createUserClicked(view: View) {
+        AuthService.registerUser(this, "fandi@f.com","password") { complete ->
+            if (complete){
 
+            }
+        }
     }
 
 }
